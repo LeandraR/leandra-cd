@@ -169,10 +169,10 @@
     <main class="cars-main container">
         <!-- Sort buttons -->
             <div class="row justify-content-end">
-                <button class="car-arrangements">
+                <button class="car-arrangements" id="cars-grid">
                     <i class="fas fa-th"></i>
                 </button>
-                <button class="car-arrangements">
+                <button class="car-arrangements" id="cars-rows">
                     <i class="fas fa-grip-lines"></i>
                 </button>
                 <div class="form-group car-sort-form">
@@ -186,9 +186,10 @@
 
 
         <!-- Row 1 -->
-        <div class="card-deck">
+        <div class="card-deck cards-area">
             <div class="card">
                 <div class="car-image-overlay">
+                    <div class="sold-ribbon">Sold!</div>
                     <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
                     <p class="car-p-overlay">$22,000</p>
                     <div class="button-overlay-div">
@@ -247,6 +248,7 @@
             </div>
             <div class="card">
                 <div class="car-image-overlay">
+                    <div class="sold-ribbon">Sold!</div>
                     <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
                     <p class="car-p-overlay">$22,000</p>
                     <div class="button-overlay-div">
@@ -277,7 +279,7 @@
         </div>
 
         <!-- Row 2 -->
-        <div class="card-deck">
+        <div class="card-deck cards-area">
             <div class="card">
                 <div class="car-image-overlay">
                     <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
@@ -366,9 +368,12 @@
                 </div>
             </div>
         </div>
-        <button>1</button>
-        <button>2</button>
-        <button>Arrow</button>
+        <!-- <div class="container align-self-center justify-content-center">
+            <button>1</button>
+            <button>2</button>
+            <button>Arrow</button>
+        </div> -->
+
     </main>
 
     <section class="stats" id="pages">

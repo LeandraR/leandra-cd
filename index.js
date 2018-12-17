@@ -43,6 +43,16 @@ $(document).ready(function () {
         $('#myInput').trigger('focus')
     })
 
+    $('#cars-grid').on('click', () => {
+        console.log('hello')
+        $('.cards-area').addClass("card-deck")
+    })
+
+    $('#cars-rows').on('click', () => {
+        console.log('goodbye')
+        $('.cards-area').removeClass('card-deck')
+    })
+
 
 
 
