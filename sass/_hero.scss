@@ -1,0 +1,26 @@
+.jumbotron {
+    background: url('../assets/hero-image.jpg');
+    background-position-y:-150px;
+    min-height:50vh;
+    overflow:hidden;
+}
+
+.white-text{
+    color:white;
+    margin-left:1em;
+    padding-bottom:1em;
+}
+
+.bold {
+    font-weight:bold;
+}
+
+.jumbotron-text {
+    position:relative;
+    bottom:-9em;
+}
+
+.display-3{
+    font-size:3em;
+    margin-bottom:0.3em;
+}

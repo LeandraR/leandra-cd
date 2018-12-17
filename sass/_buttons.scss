@@ -1,0 +1,14 @@
+.red-button {
+    background-color:rgb(213, 72, 76);
+    border:1px solid white;
+    color:white;
+}
+
+.red-button:hover {
+    background-color:rgb(235, 79, 80);
+    border:1px solid white;
+}
+
+.red-button:active, .red-button:focus{
+    background-color:rgb(235, 79, 80);
+}

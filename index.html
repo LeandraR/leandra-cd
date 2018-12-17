@@ -5,52 +5,434 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leandra's Test Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pages</a>
+                <a class="nav-link" href="#pages">Pages</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+            <li class="nav-item" id="padding-left" data-toggle="modal" data-target="#myModal">
+                <a class="nav-link" id="special" href="#">Login</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Search</a>
+            <li class="nav-item" id="line-left">
+                <a class="nav-link" href="#" id="search-icon">
+                    <i class="fa fa-search"></i>
+                </a>
+
+            </li>
+            <li class="nav-item align-bottom">
+                <input type="text" name="Search bar" id="search-input" class="search-hidden">
             </li>
         </ul>
+
+        <!-- Modal for login -->
+        <div class="modal" tabindex="-1" id="myModal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="container">
+                        <div class="card card-container" id="login-card">
+                            <h5 class="modal-title login-title text-center">Login to your Car Trader account</h5>
+                            <form class="form-signin">
+                                <span id="reauth-email" class="reauth-email"></span>
+                                <label for="inputEmail" class="visuallyhidden">Email address</label>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <label for="inputPassword" class="visuallyhidden">Password</label>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <div id="remember" class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-block btn-signin red-button" type="submit">Sign in</button>
+                            </form>
+                            <a href="#" class="forgot-password text-center">
+                                Forgot your password?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
+
     <section class="hero">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container white-text jumbotron-text">
+                <h1 class="display-3 bold">BMW X4</h1>
+                <p class="lead">
+                    <span class="bold">$110,000</span>
+                    &middot;
+                    05-2016
+                    &middot;
+                    0 miles
+                    &middot;
+                    190kw (255 hp)
+                </p>
+            </div>
+        </div>
 
     </section>
-    <section class="search">
+
+    <section class="search container align-self-center" id="features">
+        <div class="row">
+            <div class="form-group offset-md-1 col-md-5 styleSelect">
+                <select class="form-control" name="make" id="make">
+                    <option selected disabled>Select make</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="chevrolet">Chevrolet</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5">
+                <select class="form-control" name="model" disabled id="model">
+                    <option selected disabled>Select Make First</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="form-group offset-md-1 col-md-5">
+                <select class="form-control">
+                    <option selected disabled>First Registration</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5">
+                <select class="form-control">
+                    <option selected disabled>Max Mileage</option>
+                    <option value="100000">100,000</option>
+                    <option value="90000">90,000</option>
+                    <option value="80000">80,000</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group offset-md-1 col-md-5">
+                <select class="form-control">
+                    <option selected disabled>Max Price</option>
+                    <option value="50000">50,000</option>
+                    <option value="40000">40,000</option>
+                    <option value="30000">30,000</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5">
+                <button type="submit" class="btn btn-block red-button form-uppercase white-font" data-toggle="modal" data-target="#searchModal">Show Results</button>
+            </div>
+        </div>
+
+    <!-- Search Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Sorry, we don't have any vehicles with your specifications right now. Check back later!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </section>
-    <main class="cars-main">
 
+    <main class="cars-main container">
+        <!-- Sort buttons -->
+            <div class="row justify-content-end">
+                <button class="car-arrangements">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="car-arrangements">
+                    <i class="fas fa-grip-lines"></i>
+                </button>
+                <div class="form-group car-sort-form">
+                    <select class="form-control car-arrangements car-select-sort">
+                        <option selected>Sort by:</option>
+                        <option value="2012">Price Low to High</option>
+                        <option value="2013">Price High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+
+        <!-- Row 1 -->
+        <div class="card-deck">
+            <div class="card">
+                <div class="car-image-overlay">
+                    <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                    <p class="car-p-overlay">$22,000</p>
+                    <div class="button-overlay-div">
+                        <button class="button-overlay">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="button-overlay">
+                            <i class="far fa-star"></i>
+                    </div>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Volkswagen Golf 2.5l</h4>
+                    <div class="card-row">
+                        <i class="far fa-calendar-alt car-i"></i>
+                        <p class="card-text">07-2015</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-tachometer-alt car-i"></i>
+                        <p class="card-text">30,000 miles</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-chart-line car-i"></i>
+                        <p class="card-text">130 kw (175 hp)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="car-image-overlay">
+                    <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                    <p class="car-p-overlay">$22,000</p>
+                    <div class="button-overlay-div">
+                        <button class="button-overlay">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="button-overlay">
+                            <i class="far fa-star"></i>
+                    </div>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Volkswagen Golf 2.5l</h4>
+                    <div class="card-row">
+                        <i class="far fa-calendar-alt car-i"></i>
+                        <p class="card-text">07-2015</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-tachometer-alt car-i"></i>
+                        <p class="card-text">30,000 miles</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-chart-line car-i"></i>
+                        <p class="card-text">130 kw (175 hp)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="car-image-overlay">
+                    <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                    <p class="car-p-overlay">$22,000</p>
+                    <div class="button-overlay-div">
+                        <button class="button-overlay">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="button-overlay">
+                            <i class="far fa-star"></i>
+                    </div>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Volkswagen Golf 2.5l</h4>
+                    <div class="card-row">
+                        <i class="far fa-calendar-alt car-i"></i>
+                        <p class="card-text">07-2015</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-tachometer-alt car-i"></i>
+                        <p class="card-text">30,000 miles</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-chart-line car-i"></i>
+                        <p class="card-text">130 kw (175 hp)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="card-deck">
+            <div class="card">
+                <div class="car-image-overlay">
+                    <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                    <p class="car-p-overlay">$22,000</p>
+                    <div class="button-overlay-div">
+                        <button class="button-overlay">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="button-overlay">
+                            <i class="far fa-star"></i>
+                    </div>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Volkswagen Golf 2.5l</h4>
+                    <div class="card-row">
+                        <i class="far fa-calendar-alt car-i"></i>
+                        <p class="card-text">07-2015</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-tachometer-alt car-i"></i>
+                        <p class="card-text">30,000 miles</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-chart-line car-i"></i>
+                        <p class="card-text">130 kw (175 hp)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="car-image-overlay">
+                    <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                    <p class="car-p-overlay">$22,000</p>
+                    <div class="button-overlay-div">
+                        <button class="button-overlay">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="button-overlay">
+                            <i class="far fa-star"></i>
+                    </div>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Volkswagen Golf 2.5l</h4>
+                    <div class="card-row">
+                        <i class="far fa-calendar-alt car-i"></i>
+                        <p class="card-text">07-2015</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-tachometer-alt car-i"></i>
+                        <p class="card-text">30,000 miles</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-chart-line car-i"></i>
+                        <p class="card-text">130 kw (175 hp)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="car-image-overlay">
+                    <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                    <p class="car-p-overlay">$22,000</p>
+                    <div class="button-overlay-div">
+                        <button class="button-overlay">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="button-overlay">
+                            <i class="far fa-star"></i>
+                    </div>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Volkswagen Golf 2.5l</h4>
+                    <div class="card-row">
+                        <i class="far fa-calendar-alt car-i"></i>
+                        <p class="card-text">07-2015</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-tachometer-alt car-i"></i>
+                        <p class="card-text">30,000 miles</p>
+                    </div>
+                    <div class="card-row">
+                        <i class="fas fa-chart-line car-i"></i>
+                        <p class="card-text">130 kw (175 hp)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>1</button>
+        <button>2</button>
+        <button>Arrow</button>
     </main>
-    <section class="stats">
 
+    <section class="stats" id="pages">
+        <div class="card-deck container">
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="news">
 
+    <section class="news container" id="blog">
+        <h2>Latest Car News</h2>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <button>Submit Your Vehicle -></button>
     </section>
-    <section class="foot-menu">
+
+    <section class="foot-menu" id="contact">
 
     </section>
     <footer>
@@ -59,9 +441,13 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+
 </body>
 </html>
