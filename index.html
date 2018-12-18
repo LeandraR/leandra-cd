@@ -48,21 +48,21 @@
         <div class="modal" tabindex="-1" id="myModal" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="container">
-                        <div class="card card-container" id="login-card">
-                            <h5 class="modal-title login-title text-center">Login to your Car Trader account</h5>
+                    <div class="container modal-bottom-padding">
+                        <div class="card card-container modal-margin-bottom" id="login-card">
+                            <h5 class="modal-title login-title text-center modal-margin-bottom">Login to your Car Dealer account</h5>
                             <form class="form-signin">
                                 <span id="reauth-email" class="reauth-email"></span>
                                 <label for="inputEmail" class="visuallyhidden">Email address</label>
                                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                                 <label for="inputPassword" class="visuallyhidden">Password</label>
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                                <div id="remember" class="checkbox">
+                                <input type="password" id="inputPassword" class="form-control modal-margin-padding" placeholder="Password" required>
+                                <div id="remember" class="checkbox modal-margin-bottom">
                                     <label>
                                         <input type="checkbox" value="remember-me"> Remember me
                                     </label>
                                 </div>
-                                <button class="btn btn-lg btn-block btn-signin red-button" type="submit">Sign in</button>
+                                <button class="btn btn-lg btn-block btn-signin red-button modal-margin-bottom" type="submit">Sign in</button>
                             </form>
                             <a href="#" class="forgot-password text-center">
                                 Forgot your password?
@@ -168,7 +168,7 @@
 
     <main class="cars-main container">
         <!-- Sort buttons -->
-            <div class="row justify-content-end">
+            <div class="row justify-content-end change-view-area">
                 <button class="car-arrangements" id="cars-grid">
                     <i class="fas fa-th"></i>
                 </button>
@@ -177,7 +177,7 @@
                 </button>
                 <div class="form-group car-sort-form">
                     <select class="form-control car-arrangements car-select-sort">
-                        <option selected>Sort by:</option>
+                        <option selected>Sort by</option>
                         <option value="2012">Price Low to High</option>
                         <option value="2013">Price High to Low</option>
                     </select>
@@ -377,77 +377,201 @@
     </main>
 
     <section class="stats" id="pages">
-        <div class="card-deck container">
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
+        <div class="card-deck container stats-container">
+            <div class="card text-center stats-card">
                 <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
+                    <h4 class="card-title black-font">25</h4>
+                    <p class="card-text">Years in Business</p>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card text-center stats-card">
                 <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
+                    <h4 class="card-title black-font">1,000+</h4>
+                    <p class="card-text">Cars Sold</p>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card text-center stats-card">
                 <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
+                    <h4 class="card-title black-font">98%</h4>
+                    <p class="card-text">Customer Satisfaction</p>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card text-center stats-card">
                 <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
+                    <h4 class="card-title black-font">10,000+</h4>
+                    <p class="card-text">Registered Users</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="news container" id="blog">
-        <h2>Latest Car News</h2>
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
+        <h2 class="text-center car-news-title">Latest Car News</h2>
+        <div class="card-deck col-sm-12">
+            <div class="col-sm-8 col-md-4 offset-sm-2">
+                <a href="https://medium.com/search?q=cars" target="_blank">
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                        <div class="card-body">
+                            <h5 class="card-title font-bold">50 years of pony-car style</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, magnam facere quis fugit
+                                doloremque facilis?</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">&#128512 by Jane Doe</small>
+                        </div>
+                    </div>
+                </a>
+
             </div>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+            <div class="col-sm-8 col-md-4 offset-sm-2">
+                <a href="https://medium.com/search?q=cars" target="_blank">
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/car-for-sale.jpg" alt="orange car">
+                        <div class="card-body">
+                            <h5 class="card-title font-bold">Because 600hp is too low</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente reprehenderit, libero
+                                harum quia alias!</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">&#128512 by Jane Doe</small>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="text-center">
+            <button type="button" class="submit-vehicle-button" data-toggle='modal' data-target='#submitModal'>Submit Your Vehicle -></button>
+        </div>
+
+        <!-- Submit vehicle modal -->
+        <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center font-bold" id="exampleModalLabel">Interested in submitting your vehicle?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please provide us with information about your vehicle and a customer service representative will get back to you within 2 business days</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Your Contact Information:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Vehicle Information:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn red-button">Send message</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <button>Submit Your Vehicle -></button>
     </section>
 
-    <section class="foot-menu" id="contact">
+    <!-- Entire Footer section -->
+    <section class="foot-menu row" id="contact">
+        <div class="col-md-3 offset-md-1 col-sm-8  offset-sm-2 col-xs-8 offset-xs-1 footer-font text-left">
+            <h5 class="font-bold white-font">Car Dealer Inc.</h5>
+            <a href="https://www.google.com/maps" target="_blank" class="footer-white-font">
+                <p>Address: 50 Blue Jays Way, Toronto, ON</p>
+            </a>
+            <a href="tel:000-000-0000" class="footer-white-font">
+                <p>Phone: 000-000-0000</p>
+            </a>
+            <a href="mailto:car@loremipsum.com" class="footer-white-font">
+                <p>Email: car@loremipsum.com</p>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="footer-white-font footer-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="footer-white-font footer-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.google.com/" target="_blank" class="footer-white-font footer-icon">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="footer-white-font footer-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="col-md-3 offset-md-1 col-sm-8  offset-sm-2 footer-margin-top">
+            <h5 class="font-bold white-font">Opening Hours</h5>
+            <table align="left">
+                <tr>
+                    <td>Monday</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                </tr>
+            </table>
+            <table align="right">
+                <tr>
+                    <td>9:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>closed</td>
+                </tr>
+            </table>
+        </div>
 
+        <div class="col-md-3 offset-md-1 col-sm-8  offset-sm-2 footer-margin-top">
+            <h5 class="font-bold white-font">Get the best deals first</h5>
+
+            <form class="email-sub">
+                <label for="email-subscribe" class="visuallyhidden">Enter your email address</label>
+                <input name="email-subscribe" id="email-subscribe" class="email-subscribe" type="text" value="Your email address...">
+                <button class="subscribe-button red-button">Subscribe</button>
+            </form>
+
+            <p>No worries. We don't spam, promise.</p>
+        </div>
     </section>
-    <footer>
-
+    <footer >
+        <p class="copyright offset-sm-1">Copyright &copy; 2016 by Car Dealer Inc.</p>
     </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"

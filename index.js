@@ -39,7 +39,6 @@ $(document).ready(function () {
     });
 
     $('#searchModal').on('shown.bs.modal', function () {
-        console.log('hello')
         $('#myInput').trigger('focus')
     })
 
@@ -53,6 +52,9 @@ $(document).ready(function () {
         $('.cards-area').removeClass('card-deck')
     })
 
+    $('#submitModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
 
 
 

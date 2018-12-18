@@ -167,11 +167,24 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+@media (max-width: 400px) {
+  .nav {
+    justify-content: center; }
+
+  .nav-item {
+    padding: 0;
+    justify-content: center;
+    font-size: 0.6em; }
+
+  .nav-link {
+    padding: 0; } }
 .nav {
   background-color: #333333;
   color: white;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap; }
 
 #special {
   text-transform: none;
@@ -217,6 +230,9 @@ li a:hover {
 .search-showing {
   transition: all 2s; }
 
+.modal-margin-bottom {
+  margin-bottom: 25px; }
+
 .red-button {
   background-color: #d5484c;
   border: 1px solid white;
@@ -229,16 +245,27 @@ li a:hover {
 .red-button:active, .red-button:focus {
   background-color: #eb4f50; }
 
+body {
+  overflow-x: hidden; }
+
 .jumbotron {
   background: url("../assets/hero-image.jpg");
-  background-position-y: -150px;
   min-height: 50vh;
-  overflow: hidden; }
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%; }
 
 .white-text {
   color: white;
   margin-left: 1em;
   padding-bottom: 1em; }
+
+.hero {
+  max-width: 100%; }
 
 .bold {
   font-weight: bold; }
@@ -252,7 +279,7 @@ li a:hover {
   margin-bottom: 0.3em; }
 
 .search {
-  margin: 0 auto;
+  margin-top: 15vh;
   padding: 3em;
   background-color: #F4F4F4; }
 
@@ -262,6 +289,15 @@ li a:hover {
 .form-uppercase {
   text-transform: uppercase;
   font-weight: bold; }
+
+.cars-main {
+  margin-top: 5vh; }
+
+main {
+  margin-bottom: 10vh; }
+
+.change-view-area {
+  margin-bottom: 5vh; }
 
 .form-control {
   color: gray; }
@@ -322,12 +358,6 @@ select .car-select-sort {
 .card-deck {
   margin-bottom: 1em; }
 
-.card-deck:first-child {
-  margin-left: 0; }
-
-.card-deck:last-child {
-  margin-right: 0; }
-
 .sold-ribbon {
   width: 200px;
   background: #e43;
@@ -343,5 +373,108 @@ select .car-select-sort {
 
 body {
   font-family: 'Fira Sans', sans-serif; }
+
+.stats {
+  background: rgba(140, 140, 140, 0.19); }
+
+.black-font {
+  color: black;
+  font-weight: bold; }
+
+.stats-card {
+  border: none;
+  background: transparent;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto; }
+
+.news {
+  margin-top: 15vh; }
+
+.card-footer {
+  background: transparent; }
+
+.car-news-title {
+  font-weight: bold;
+  margin-bottom: 10vh; }
+
+.font-bold {
+  font-weight: bold;
+  color: black; }
+
+.submit-vehicle-button {
+  border: 2px solid #d5484c;
+  color: #d5484c;
+  text-transform: uppercase;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 9vh 0; }
+
+.submit-vehicle-button:hover {
+  color: white;
+  background: #d5484c; }
+
+.foot-menu {
+  background: #333333;
+  color: white;
+  padding: 5vh 0;
+  margin-top: 9vh;
+  max-width: 100%; }
+
+.footer-white-font, .white-font {
+  color: white; }
+
+.footer-white-font:hover {
+  color: #6a6b6d;
+  text-decoration: none; }
+
+.footer-icon {
+  background: rgba(201, 201, 201, 0.43);
+  min-width: 30px;
+  min-height: 30px;
+  padding: 10px;
+  margin: 3px; }
+
+.email-sub {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0; }
+
+.email-subscribe {
+  padding-left: 3px;
+  margin: 0;
+  flex-grow: 1;
+  border: none;
+  border-radius: 3px 0 0 3px; }
+
+.subscribe-button {
+  padding: 9px;
+  margin: 0;
+  border-radius: 0 3px 3px 0;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid transparent; }
+
+.subscribe-button:hover {
+  border: 1px solid #eb4f50; }
+
+footer {
+  background: #2b2b2b;
+  color: lightgrey; }
+
+.copyright {
+  padding: 0;
+  margin-bottom: 0; }
+
+.footer-margin-top {
+  margin-top: 5vh; }
 
 /*# sourceMappingURL=style.css.map */
